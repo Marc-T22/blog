@@ -1,0 +1,42 @@
+<?php 
+if (session_status() === PHP_SESSION_NONE): ?>
+    <?php session_start() ?>
+<?php endif ?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <script src="https://kit.fontawesome.com/3903820350.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <?php if (isset($_SESSION['auth'])): ?>
+            <p>Bonjour <?= $_SESSION['auth']['firstname'] ?> <?= $_SESSION['auth']['lastname'] ?></p>
+        <?php endif ?>
+            <h1>-B-l-o-g-</h1>
+                <div class="flex">  
+                    <li><a href="index.php">Accueil</a></li>
+                     <?php if (isset($_SESSION['auth'])): ?>
+                        <li><a href="admin.php">Administration</a></li>
+                        <li><a href="logout.php">Déconnexion</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php">Connexion</a></li>
+                        <li><a href="register.php">Inscription</a></li>
+                    <?php endif ?>
+                </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <?php require $template . '.phtml' ?>
+    </main>
+    
+    <footer>
+        
+    </footer>
+</body>
+</html>

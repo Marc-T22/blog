@@ -1,0 +1,19 @@
+<h1>Modifier l'Article</h1>
+<form method="post">
+    <fieldset>
+        <label for="titleModif">Titre:</label><br>
+          <input type="text" id="titleModif" name="titleModif" value="<?= $article['title'] ?>"><br>
+          
+        <label for="articleModif">Article :</label><br>
+          <textarea name="articleModif" id="articleModif" cols="60" rows="8"><?= $article['content'] ?></textarea>
+          <br>
+        <label for="categoryModif">Category:</label>
+            <select name="categoryModif" id="categoryModif">
+            <?php foreach ($categories as $categorie): ?>
+               <option value="<?= $categorie['id'] ?>"><?= $categorie['name'] ?></option>
+            <?php endforeach ?>
+            </select>
+        <br>    
+        <button type="submit" value="Submit">Modifier</button>
+    </fieldset>
+</form>

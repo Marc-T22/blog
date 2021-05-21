@@ -1,0 +1,18 @@
+<h1>Categories : </h1>
+<div>
+    <div class="nav">
+        <h2>Categories :</h2>
+         <?php foreach ($categories as $categorie): ?>
+             <li><a href="category.php?id=<?= $categorie['ID'] ?>"><?= $categorie['name'] ?>(<?= $categorie['nbART'] ?>)</a></li>
+         <?php endforeach ?>
+    </div>
+    <?php foreach ($articles as $article): ?>
+    <article>
+        <h2><a href="article.php?title=<?= $article['title'] ?>"><i class="fas fa-newspaper"></i>  <?= $article['title'] ?></a></h2>
+        <p><?= $article['content'] ?></p>
+        <p>créé le : <?= $article['creation_date'] ?></p>
+        <p>Par : <?= $article['firstname'] ?> <?= $article['lastname'] ?></p>
+    </article>
+    <hr>
+    <?php endforeach ?>
+</div>

@@ -1,0 +1,28 @@
+<h1>Nouvel Article</h1>
+<form action="newarticle.php" method="post">
+    <fieldset>
+        <label for="title">Titre:</label><br>
+          <input type="text" id="title" name="title"><br>
+          
+        <label for="articleNew">Article :</label><br>
+          <textarea name="articleNew" id="articleNew" cols="60" rows="8"></textarea>
+          <br>
+        <label for="author">Auteur:</label>
+            <select name="author" id="author">
+            <?php foreach ($usersliste as $user): ?>
+              <option value="<?= $user['id'] ?>"><?= $user['firstname'] ?>-<?= $user['lastname'] ?></option>
+            <?php endforeach ?>
+            </select>
+        <br>
+        <label for="category">Category:</label>
+            <select name="category" id="category">
+            <?php foreach ($categories as $categorie): ?>
+               <option value="<?= $categorie['id'] ?>"><?= $categorie['name'] ?></option>
+            <?php endforeach ?>
+            </select>
+        <br>    
+        <button type="submit" value="Submit">Créer</button>
+    </fieldset>
+</form>
+
+        

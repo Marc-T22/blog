@@ -1,0 +1,25 @@
+<h1>Page d'accueil :</h1>
+<div>
+    <div class="nav">
+        <h2>Categories :</h2>
+         <?php foreach ($categories as $categorie): ?>
+             <li><a href="category.php?id=<?= $categorie['ID'] ?>"><?= $categorie['name'] ?>(<?= $categorie['nbART'] ?>)</a></li>
+         <?php endforeach ?>
+    </div>
+    <?php foreach ($articles as $article): ?>
+    <article>
+        <h2><a href="article.php?title=<?= $article['title'] ?>"><i class="fas fa-newspaper"></i>  <?= $article['title'] ?></a></h2>
+        <!--nl2br = respecter les retour à la ligne de la BD-->
+        <p><?= nl2br($article['content']) ?></p>
+        <p>créé le : <?= $article['creation_date'] ?></p>
+        <p>Par : <?= $article['firstname'] ?> <?= $article['lastname'] ?></p>
+    </article>
+    <hr>
+    <?php endforeach ?>
+    <nav class="flex1">
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                <li><a href="?page=<?= $i ?>">Page : <?= $i ?></a></li>
+            <?php endfor ?>
+    </nav>
+</div>
+

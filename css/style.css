@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Open+Sans&display=swap');
+/*GLOBAL */
+* {
+    box-sizing:border-box;
+    margin:0;
+}
+/*=============================== GENERAL ==============================
+=======================================================================*/
+html {
+    font-size:62.5%;
+}
+body {
+    font-size:1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    color:#666;
+}
+header h1{
+    font-family: 'Amaranth', sans-serif;
+    text-align:center;
+    color:white;
+    font-size:5rem;
+    padding:2rem;
+}
+header{
+    background-image:url('https://vivrelibredotblog.files.wordpress.com/2018/01/le-fond-et-la-forme.png') ;
+}
+header p{
+    color:white;
+    font-size:1.5rem;
+    font-weight:bold;
+    padding:2rem 2rem 0 0;
+    text-align:right;
+}
+header a{
+    text-decoration:none;
+    color:white;
+    font-size:3rem;
+    padding:1rem;
+}
+header a:hover{
+    color:black;
+}
+.flex{
+    display:flex;
+    justify-content :space-around;
+    width:100%;
+}
+li{
+    list-style:none;
+    text-align:center;
+    text-decoration:none;
+    width:33%;
+    margin-bottom:1rem;
+}
+.container{
+    width:1024px;
+    margin:auto;
+}
+main h1{
+    font-family: 'Amaranth', sans-serif;
+    text-align:center;
+    color:grey;
+    font-size:3rem;
+    padding:2rem;
+}
+article{
+    padding:2rem;
+    background: white;
+    box-shadow: inset 0 0 10px grey;
+}
+article p{
+    padding:1rem;
+}
+.menu{
+    background:white;
+    padding:2rem;
+    margin-bottom:1rem;
+    box-shadow: inset 0 0 10px grey;
+}
+.menu p{
+    padding:1rem;
+}
+.menu h2{
+    font-family: 'Amaranth', sans-serif;
+    text-align:center;
+    font-size:3rem;
+    padding:2rem;
+}
+main article h2{
+    font-family: 'Amaranth', sans-serif;
+    font-size:2.5rem;
+    padding:2rem;
+}
+main article h2 a{
+    text-decoration:none;
+    color:#F77453;
+}
+main article h2 a:hover{
+    color:black;
+}
+main hr{
+    width:70%;
+    margin:2rem auto;
+    color:#FDB470;
+}
+fieldset{
+    border :2px #FDB470 solid;
+    border-radius:50px;
+    padding : 2rem;
+    margin-top:2rem;
+}
+footer{
+    margin-top:2rem;
+    height:10rem;
+    background-image:url('https://vivrelibredotblog.files.wordpress.com/2018/01/le-fond-et-la-forme.png') ;
+}
+td{
+    padding:2rem;
+}
+.creer{
+    text-decoration:none;
+    font-size:2.5rem;
+    background-color:#FDB470;
+    color:white;
+    font-weight:bold;
+    padding:1rem;
+    width:70%;
+    text-align:center;
+    display:block;
+    margin:2rem auto;
+}
+.creer:hover{
+    background-color:#80A07E;
+    color:#FDB470;
+}
+table{
+    margin:auto;
+}
+.nav{
+    position:fixed;
+    top:22.5rem;
+    right:5rem;
+    background: white;
+    padding:2rem;
+    box-shadow: 0 4px 5px -2px grey;
+}
+.nav a{
+    text-decoration:none;
+    color:#FDB470;
+    font-size:2rem;
+}
+.nav a:hover{
+    color:black;
+}
+.flex1 {
+    display:flex;
+    width:100%;
+}
+.flex1 li{
+    width:20%;
+    padding:2rem;
+}
+.flex1 li a{
+    text-decoration:none;
+    color:#FDB470;
+    padding:1rem;
+    border:solid #FDB470 2px;
+    font-weight:bold;
+}
+.flex1 li a:hover{
+    color:black;
+    border:solid black 2px;
+}

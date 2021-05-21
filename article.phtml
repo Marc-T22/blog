@@ -1,0 +1,29 @@
+<hr>
+<h1>Article</h1>
+    <div class="menu">
+        <h2><i class="fas fa-newspaper"></i>  <?= $article['title'] ?></h2>
+        <p><?= $article['content'] ?></p>
+        <p>Rédigé par <?= $article['firstname'] ?> <?= $article['lastname'] ?>,<br> le <?= $article['creation_date'] ?></p>
+    </div>
+    <hr>
+    <h2>Commentaires :</h2>
+<?php foreach ($comments as $comment): ?>
+    <div class='menu'>
+        <p><i class="fas fa-comment"></i> <?= $comment['content'] ?></p>
+        <p>De :<?= $comment['username'] ?><br>Le :<?= $comment['creation_date'] ?></p>
+        <p></p>
+    </div>
+<?php endforeach ?>
+<?php if (isset($_SESSION['auth'])): ?>
+    <form action="article.php?title=<?= $article['title'] ?>" method="post">
+        <fieldset>
+            <!--<label for="pseudo">Pseudo :</label><br>-->
+            <!--  <input type="text" id="pseudo" name="pseudo"><br>-->
+            <label for="commentaireNew">Comentaire :</label><br>
+              <textarea name="commentaireNew" id="commentaireNew" cols="60" rows="8"></textarea>
+              <br>
+            <button type="submit" value="Submit">Créer</button>
+            <input type="hidden" name="POSTid" value="<?= $article['POSTid'] ?>">
+    </fieldset>
+<?php endif ?>
+</form>
